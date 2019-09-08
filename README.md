@@ -1,4 +1,7 @@
-Connect to Mikrotik RouterOs version above 6.43 using Mikrotik Api
+Connect to Mikrotik RouterOs using Mikrotik Api
+## Update 20190908
+Added ROS.LoginPre643() to login 
+
 
 ## How to use 
   ``` VB.net
@@ -11,6 +14,7 @@ Connect to Mikrotik RouterOs version above 6.43 using Mikrotik Api
 
   ROS.Connect(Auth)
   ROS.Login()
+  'ROS.LoginPre643() 'For RouterOS below 643
   ```
 
 
