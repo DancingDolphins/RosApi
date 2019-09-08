@@ -92,6 +92,8 @@
     <Compile Include="Services\RosServiceCallBackType.vb" />
     <Compile Include="Services\R_ip_address.vb" />
     <Compile Include="Services\R_ip_hotspot_active.vb" />
+    <Compile Include="Services\R_Login_respons_pre643.vb" />
+    <Compile Include="Services\R_Login_pre643.vb" />
     <Compile Include="Services\R_Login.vb" />
     <Compile Include="Services\R_ServiceBase.vb" />
     <Compile Include="Services\R_Service_Common.vb" />

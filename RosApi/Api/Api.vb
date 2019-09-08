@@ -122,6 +122,46 @@ Public Class Api
         End If
 
     End Function
+    Public Function LoginPre643() As Boolean
+        If Link.IsConnected = False Then
+            IsLogin = False
+            OnLog("Login Failed! Please Connect First")
+            Return False
+        End If
+
+        Dim R_Login As New R_Login_pre643
+
+
+        Dim Ret As String = ""
+        R_Login.DoneCallBack = (Sub(X As R_Login_pre643, Y As RosPacketItem)
+                                    OnLog("Login Sended")
+                                    Ret = X.ReplyPackets.First().KV("ret")
+
+                                End Sub)
+        R_Login.TrapCallBack = (Sub(X As R_Login_pre643, Y As RosPacketItem)
+                                    OnLog("Login Failed! Message=" + X.ErrorMessage)
+                                End Sub)
+        Services.RunServices(R_Login)
+        If R_Login.IsError() Then
+            IsLogin = False
+            Return IsLogin
+        End If
+
+        Dim R_Login_Reply As New R_Login_respons_pre643
+        R_Login_Reply.SetAuth(Auth, Ret)
+        R_Login_Reply.DoneCallBack = (Sub(X As R_Login_respons_pre643, Y As RosPacketItem)
+                                          OnLog("Login Received Done")
+
+
+                                      End Sub)
+        R_Login_Reply.TrapCallBack = (Sub(X As R_Login_respons_pre643, Y As RosPacketItem)
+                                          OnLog("Login Failed! Message=" + X.ErrorMessage)
+                                      End Sub)
+        Services.RunServices(R_Login_Reply)
+        IsLogin = R_Login_Reply.IsError
+        Return IsLogin
+    End Function
+
 
     Public Function Login() As Boolean
         If Link.IsConnected = False Then
@@ -134,25 +174,22 @@ Public Class Api
 
         R_Login.SetAuth(Auth)
         R_Login.DoneCallBack = (Sub(X As R_Login, Y As RosPacketItem)
-                                    OnLog("Login Done")
+                                    OnLog("Login Received Done")
 
-                                    IsLogin = True
+
 
                                 End Sub)
         R_Login.TrapCallBack = (Sub(X As R_Login, Y As RosPacketItem)
                                     OnLog("Login Failed! Message=" + X.ErrorMessage)
-                                    IsLogin = False
+
                                 End Sub)
         Dim ServerRep As IRosService = Services.RunServices(R_Login)
 
-        Return IsLogin
+        If R_Login.IsError() Then
 
-        'Me.ShowDebug = False
-        'If ServerRep.Statue < 0 Then
-        '    IsLogin = False
-        '    OnLog("Login Failed! Message=" + System.Enum.GetName(GetType(RosServiceStatue), ServerRep.Statue))
-        '    Return False
-        'End If
+            IsLogin = False
+            Return IsLogin
+        End If
 
 
     End Function
