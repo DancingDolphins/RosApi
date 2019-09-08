@@ -1,5 +1,5 @@
 ﻿Public Interface IRosService
-
+    'test
     ReadOnly Property Tag As Integer?
     ReadOnly Property Command As RosCommand
     Property Statue As RosServiceStatue
