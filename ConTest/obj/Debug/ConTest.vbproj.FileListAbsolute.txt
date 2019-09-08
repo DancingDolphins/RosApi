@@ -1,0 +1,15 @@
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\bin\Debug\ConTest.exe.config
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\bin\Debug\ConTest.exe
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\bin\Debug\ConTest.pdb
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\bin\Debug\ConTest.xml
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\bin\Debug\RosApi.dll
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\bin\Debug\RosApi.pdb
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\bin\Debug\RosApi.xml
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\obj\Debug\ConTest.vbprojAssemblyReference.cache
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\obj\Debug\ConTest.Resources.resources
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\obj\Debug\ConTest.vbproj.GenerateResource.cache
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\obj\Debug\ConTest.vbproj.CoreCompileInputs.cache
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\obj\Debug\ConTest.vbproj.CopyComplete
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\obj\Debug\ConTest.exe
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\obj\Debug\ConTest.xml
+E:\Myfiles\Projects\workspace\Github\RosApi\ConTest\obj\Debug\ConTest.pdb
